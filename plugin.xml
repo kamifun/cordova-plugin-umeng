@@ -5,6 +5,8 @@
         version="3.0.0">
     
     <name>Umeng</name>
+    <preference name="UMENG_ANDROID_APPKEY" />
+    <preference name="UMENG_ANDROID_CHANNEL" default="Umeng-Channel" />
     
     <js-module src="www/Umeng.js" name="Umeng">
         <clobbers target="MobclickAgent" />
@@ -40,8 +42,8 @@
         </config-file>
         <config-file target="AndroidManifest.xml"  parent="application">
             <!-- appkey -->
-            <meta-data android:name="UMENG_APPKEY" android:value="59433db2f43e485a010002fe" />
-            <meta-data android:name="UMENG_CHANNEL" android:value="Umeng-Channel"/>
+            <meta-data android:name="UMENG_APPKEY" android:value="$UMENG_ANDROID_APPKEY" />
+            <meta-data android:name="UMENG_CHANNEL" android:value="$UMENG_ANDROID_CHANNEL"/>
         </config-file>        
         <config-file target="AndroidManifest.xml"  parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
